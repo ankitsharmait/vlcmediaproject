@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Positioning</title>
+    <style>
+        .parent
+    {
+        background: lightblue;
+        width: 90vw;
+    }
+    .box
+    {
+        height: 5rem;
+        width: 5rem;
+        border: 2px solid;
+        margin-bottom: 1rem;
+    }
+    .one
+    {
+        background: red;
+    }
+    /* we are applying position : relative;on second box */
+    /* An element with position: relative; is positioned relative to its normal position. */
+    /* After applying position:relative; on second box the we set top bottom left and right
+     valu on the box which cause box move to other postion relative to it's original position but
+     the gap cannot e filled by other box they remain same and this is the beauty of position:relative;*/
+    .two
+    {
+        background: yellow;
+        position: relative;
+        /* 100px move  below to it's oiginal position */
+        top: 100px;
+        /* move 150px away from left side means move right side*/
+        left: 150px;
+        
+
+        
+    }
+    .three
+    {
+        background: goldenrod;
+    }
+.four
+{
+    background: green;
+}
+    </style>
+</head>
+
+<!-- position property :The position property specifies the type of positioning method used for an element  -->
+ <!-- there are five different types of positioning property 
+  1:-position:static
+  2:-position:relative   
+  3:position:static
+  4:-postion:absolute
+  5:position:sticky -->
+
+  <!-- most used are relative and absolute -->
+   <!-- elements are then positioned using top bottom left and right properties
+     however these property will not work until the position property is set
+     and it works differenly on different positon value -->
+<body>
+
+    <!-- normal flow of html document is top to bottom and left to right -->
+     <!-- And by default position of every html element is static
+       position:static that means top to bottom and left to right-->
+    <div class="parent">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+        <div class="box four">4</div>
+    </div>
+</body>
+</html>
