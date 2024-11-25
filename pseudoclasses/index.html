@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes in Css</title>
+    <style>
+        /* Anchor Pseudo-classes..
+        Links can be displayed in different ways:  */
+        /* unvisited link:-jab hmlog visit nhi karenge tab link ka color brown hoga */
+        a:link {
+            color: brown;
+        }
+
+        /* visited link:- link par visit karne ke bad link ka color change hokr blue ho jayega  */
+        a:visited {
+            color: blue;
+        }
+      /* jab Link ke uper hover krenge then link ka color black hoga */
+        a:hover
+        {
+            color: black;
+        }
+        a:active
+        {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Pseudo Classes</h2>
+    <!-- A pseudo-class is used to define a special state of an element.
+     Example:- change the colour of an element when it visisted, apply padding when it  clicked, -->
+    <!-- The syntax of pseudo-classes:
+          selector:pseudo-class {
+                    property: value;
+                                }  -->
+    <!-- anchor tag with google link -->
+    <a href="http://google.com/"> Link</a>
+</body>
+
+</html>
