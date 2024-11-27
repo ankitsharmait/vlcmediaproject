@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 30rem;
+            width: 30rem;
+            background: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .toast {
+            height: 5rem;
+            width: 5rem;
+            background: lightsalmon;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            left: 300px;
+            display: none;
+        }
+
+        button {
+            color: blue;
+            background: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The Toast component is like an alert box that is only
+      shown for a couple of seconds when something happens 
+     (i.e. when the user clicks on a button, submits a form, etc.).-->
+
+    <!-- toast ka matlb hai ki hmlog jaise ki chahte hain like ki kisi button par agr 
+      click ho then kuch message show ho for few seconds aur ko specific position par ho 
+      isi ko toast kahte hain...-->
+
+    <!-- hmlog yha chhte hain ki jab create toast button pe click ho then hi everyone box top right corner me 2 sec ke liye visible ho. -->
+
+    <div class="box">
+        <button>Create toast</button>
+        <div class="toast">
+            <div>Hi Everyone</div>
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector("button");
+        const toast = document.querySelector(".toast");
+
+        button.addEventListener('click', function () {
+            toast.style.display = "block";
+            setTimeout(function () {
+                toast.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
